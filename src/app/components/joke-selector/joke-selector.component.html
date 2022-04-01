@@ -1,2 +1,9 @@
-<h3>{{displayJoke.joke}}</h3>
-<button (click)="getJoke()">Get me a joke</button>
+<div class="selector-container">
+  <h3>{{displayJoke.joke}}</h3>
+  <div class="reactions">
+    <button (click)="approve()">YES</button>
+    <button (click)="disapprove()">NO</button>
+  </div>
+
+</div>
+

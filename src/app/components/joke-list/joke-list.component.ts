@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {CollectionService} from "../../services/collection.service";
+import {Joke} from "../../interfaces/joke";
 
 @Component({
   selector: 'app-joke-list',
@@ -6,10 +8,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./joke-list.component.css']
 })
 export class JokeListComponent implements OnInit {
+  displayList: Joke[] = []
 
-  constructor() { }
+  constructor(private collection: CollectionService) { }
 
   ngOnInit(): void {
+    this.displayList = this.collection.jokeCollection
   }
 
 }
